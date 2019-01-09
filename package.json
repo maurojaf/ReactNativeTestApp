@@ -14,6 +14,7 @@
     "@expo/samples": "2.1.1",
     "expo": "^31.0.2",
     "firebase": "^5.7.2",
+    "font-awesome": "^4.7.0",
     "node-modules": "^1.0.1",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
