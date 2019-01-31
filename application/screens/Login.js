@@ -13,6 +13,11 @@ export default class Login extends Component {
     constructor(){
         super();
 
+        this.user= t.struct({
+            email: FormValidation.email,
+            password: FormValidation.password
+        });
+
         this.options = {
             fields: {
                 email: {

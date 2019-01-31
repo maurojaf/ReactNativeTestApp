@@ -2,12 +2,18 @@ import React from 'react';
 
 import {createStackNavigator, createAppContainer } from "react-navigation";
 import StartScreen from "../screens/Start";
+import LoginScreen from "../screens/Login";
 
 const RootStack = createStackNavigator (
     {
         Start: {
             screen: StartScreen
-        }   
+        },
+        Login: {
+            screen: LoginScreen
+        },
+        
+
     },
 
     {
