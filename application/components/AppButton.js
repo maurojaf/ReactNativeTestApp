@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-//import Icon from 'react-native-vector-icons/dist/FontAwesome';
+//import Icon from 'react-native-vector-icons/FontAwesome';
+//import Icon from 'react-native-elements';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import {Dimensions} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -31,7 +32,8 @@ export default class AppButton extends Component {
                         name={iconName}
                         size={15}
                         color={iconColor}
-                        rightIcon={true}
+                        // rightIcon={true}
+                        //reverse
                     />
                     
                 }

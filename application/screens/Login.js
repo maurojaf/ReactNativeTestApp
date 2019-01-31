@@ -9,4 +9,53 @@ const Form = t.form.Form;
 import * as firebase from 'firebase';
 import Toast from 'react-native-simple-toast';
 
-// export default class Login
+export default class Login extends Component {
+    constructor(){
+        super();
+
+        this.options = {
+            fields: {
+                email: {
+                    help: 'Introduce tu Email',
+                    error: 'Email incorrecto',
+                    autoCapitalize: 'none',
+                },
+                password: {
+                    help: 'Introduce tu Password',
+                    error: 'Password incorrecta',
+                    password: true,
+                    secureTextEntry: true,
+                }
+            }
+        };
+    }
+
+    Login (){
+
+    }
+    render (){
+        return (
+            <BackgroundImage
+              source={require('../../assets/images/login-bg.png')}>              
+                <View>
+                    <Card wrapperStyle={{paddingLeft: 10}} title="Iniciar Sesión">
+                        <Form
+                            ref="form"
+                            type={this.user}
+                            options={this.options}                            
+                        />
+                        <AppButton
+                            bgColor="rgba(111, 38, 74, 0.7)"
+                            title="Login"
+                            action={this.Login.bind(this)}
+                            iconName="sign-in"
+                            iconSize={30}
+                            iconColor="#fff"
+                        />
+                    </Card>
+                </View>
+
+          </BackgroundImage>
+        )
+    }
+}
