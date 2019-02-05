@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
-import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-//import Icon from 'react-native-elements';
-import {Dimensions} from 'react-native';
-//import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import React, {Component} from 'react'
+import { Button } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import { Dimensions } from 'react-native'
 
 
 export default class AppButton extends Component {
