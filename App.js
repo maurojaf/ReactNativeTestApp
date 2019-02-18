@@ -4,6 +4,7 @@ import firebaseConfig from './application/utils/firebase';
 import * as firebase from 'firebase';
 firebase.initializeApp(firebaseConfig);
 import {Text} from 'react-native-elements';
+import RestaurantEmpty from "./application/components/Restaurant/RestaurantEmpty";
 
 import GuestNavigation from './application/navigations/guest';
 
@@ -19,6 +20,8 @@ export default class App extends React.Component {
   }
 
 async componentDidMount () {
+//firebase.auth().signOut();
+
   await firebase.auth().onAuthStateChanged((user) => {
       if(user !== null){
         this.setState({
@@ -43,7 +46,7 @@ async componentDidMount () {
     }
 
     if(isLogged){
-      return (<Text> Logueado</Text>)
+      return (<RestaurantEmpty text="No hay restaurantes disponibles"/>);
     }else{
       return (<GuestNavigation/>)
     }      
